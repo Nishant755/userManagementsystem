@@ -1,0 +1,25 @@
+<% include('../layouts/header.ejs'); %>
+  <h1>Add New User </h1>
+  <form action="" method="post" enctype="multipart/form-data">
+    <br><br>
+    <label name="name"></label>
+    <input type="text" name="name" placeholder="Enter name here" require>
+    <br><br>
+    <input type="email" name="email" placeholder="enter email here" require>
+    <br><br>
+    <input type="text" name="mobile" placeholder="enter your mobile" require>
+    <br><br>
+    <input type="file" name="image" require>
+    <br><br>
+    <input type="submit" value="Register">
+  </form>
+
+
+  <% if(typeof message!=="undefined" ){ %>
+    <p style="color: rgb(128, 9, 0);">
+      <%= message %>
+    </p>
+    <% } %>
+<a href="/admin/dashbord">Back</a>
+
+<% include('../layouts/footer.ejs'); %>

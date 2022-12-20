@@ -15,11 +15,16 @@ mongoose.connect("mongodb+srv://Nishant:Nishant123@cluster0.bqmrmhr.mongodb.net/
 
 
 
-// import routes
+// import user routes
 let userRoute = require("./routes/routes")
 //connect expree server to router
 app.use('/', userRoute)
 
+
+// import admin routes
+let adminRoute = require("./routes/adminRoute")
+//connect expree server to router
+app.use('/admin', adminRoute)
 
 app.listen(process.env.PORT || 3000, function () {
     console.log('Express app running on port ' + (process.env.PORT || 3000))

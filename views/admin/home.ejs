@@ -1,0 +1,48 @@
+<% include("../layouts/header.ejs")%>
+
+    <h1>
+        welcome, <%= admin.name%>
+    </h1>
+    <br>
+    <a href="/admin/dashboard">dashboard</a>
+
+    <table style="width:50%;">
+
+
+        <tr>
+            <td>
+                <img src="/userImages/<%= admin.image%>" windth="100px" ,heigth="100px" alt="<%= admin.image%>">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Email
+            </td>
+            <td>
+                <%= admin.email%>
+            </td>
+
+            <td>
+                mobile
+            </td>
+            <td>
+                <%= admin.mobile%>
+            </td>
+
+
+
+
+        </tr>
+
+
+
+    </table>
+
+
+
+    <a href="/admin/logout">logout</a>
+
+
+
+
+    <% include("../layouts/footer.ejs")%>
